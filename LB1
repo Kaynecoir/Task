@@ -43,9 +43,19 @@ int main()
     }
     else{
         printf("\n%d = %d", sum_int, sum_doub);
-    }/*
-    printf("\n%d\n", sum_int);
-    printf("%d", sum_doub);
+    }
+    /*
+    test 1:
+    >>>25.65
+    7 < 11
+    
+    test 2:
+    >>>785.2001
+    20 > 3
+    
+    test 3:
+    >>>1675.30012
+    19 > 6
     */
     return 0;
 }
