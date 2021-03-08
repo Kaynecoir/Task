@@ -23,10 +23,10 @@ int main()
     do{
         //printf("%f - %d = %f\n", u, d1, u-d1);
         sum_doub += d1 % 10;
-        if(u - d1 < 0.001){
+        if(u - d1 < 0.0001){
             break;
         }
-        if(u - d1 <= 1.001 && u - d1 >= 0.999){
+        if(u - d1 <= 1.0001 && u - d1 >= 0.9999){
             sum_doub++;
             break;
         }
