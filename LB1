@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int d1, sum_int = 0, sum_doub = 0;
+    double y, u, p;
+    scanf("%lf", &y);
+
+    //printf("%lf\n", y);
+    d1 = y;
+    while(d1){
+        sum_int += d1 % 10;
+        d1 /= 10;
+    }
+
+
+    d1 = y;
+    u = y - d1;
+    u = u * 10;
+    d1 = u;
+
+    do{
+        //printf("%f - %d = %f\n", u, d1, u-d1);
+        sum_doub += d1 % 10;
+        if(u - d1 < 0.001){
+            break;
+        }
+        if(u - d1 <= 1.001 && u - d1 >= 0.999){
+            sum_doub++;
+            break;
+        }
+
+
+        u *= 10;
+        d1 = u;
+    }while(1);
+    if(sum_int > sum_doub){
+        printf("\n%d > %d", sum_int, sum_doub);
+    }
+    else if(sum_int < sum_doub){
+        printf("\n%d < %d", sum_int, sum_doub);
+    }
+    else{
+        printf("\n%d = %d", sum_int, sum_doub);
+    }/*
+    printf("\n%d\n", sum_int);
+    printf("%d", sum_doub);
+    */
+    return 0;
+}
